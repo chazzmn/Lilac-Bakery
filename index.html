@@ -1,405 +1,248 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#4F7E8A" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best ES Barber — Skin Fades &amp; Haircuts, St Thomas, Exeter | 116 Cowick Street</title>
+<meta name="description" content="Barber at 116 Cowick Street, St Thomas, Exeter. Skin fades, men's, women's and kids' cuts, beard trims and colour. Walk-ins welcome — check our live wait status or call ahead.">
+<meta property="og:title" content="Best ES Barber — St Thomas, Exeter">
+<meta property="og:description" content="Skin fades, kids' cuts and colour on Cowick Street. Walk in or call ahead.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bestesbarber.co.uk/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Best ES Barber",
+  "description": "Barber shop in St Thomas, Exeter offering men's, women's and kids' haircuts, skin fades, beard trims and colour.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "116 Cowick Street",
+    "addressLocality": "St Thomas, Exeter",
+    "addressRegion": "Devon",
+    "postalCode": "EX4 1JB",
+    "addressCountry": "GB"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 50.7160, "longitude": -3.5440 },
+  "telephone": "+441392000000",
+  "url": "https://bestesbarber.co.uk",
+  "priceRange": "£",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "16:00" }
+  ]
+}
+</script>
+<style>
+:root{
+  --black:#161616; --black-soft:#222222; --white:#ffffff; --grey:#f4f4f4;
+  --blue:#2563ff; --blue-deep:#1b4ad1; --ink-soft:#6b6b6b; --line:#e3e3e3;
+  --disp:'Oswald',sans-serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--black);background:var(--white);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.08;text-transform:uppercase;letter-spacing:.02em}
+h1{font-size:clamp(2.6rem,9vw,4.4rem)}
+h2{font-size:clamp(1.8rem,5.5vw,2.6rem);margin-bottom:.7rem}
+section{padding:4rem 1.25rem}
+.wrap{max-width:1000px;margin:0 auto}
+.eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:.5rem}
+.muted{color:var(--ink-soft)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:.9rem 1.9rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:.95rem;border:none;cursor:pointer;font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em}
+.btn:hover{background:var(--blue-deep)}
+.btn--white{background:#fff;color:var(--black)}
+.btn--white:hover{background:var(--grey)}
 
-  <!-- Primary SEO -->
-  <title>Lilac Bakery — Artisan Bakery in St Thomas, Exeter | Sourdough on Cowick Street</title>
-  <meta name="description" content="Lilac Bakery is an artisan neighbourhood bakery & cafe on Cowick Street, St Thomas, Exeter. Sourdough, pastries and custom cakes — everything handmade on site. Pre-order ahead or enquire about a celebration cake." />
-  <meta name="keywords" content="artisan bakery Exeter, bakery St Thomas Exeter, sourdough Cowick Street, Lilac Bakery Exeter, custom cakes Exeter, pastries Exeter, cafe St Thomas" />
-  <link rel="canonical" href="https://www.lilacbakery.co.uk/" />
-  <meta name="robots" content="index, follow" />
-  <meta name="geo.region" content="GB-DEV" />
-  <meta name="geo.placename" content="St Thomas, Exeter" />
-  <meta name="geo.position" content="50.7186;-3.5421" />
-  <meta name="ICBM" content="50.7186, -3.5421" />
+.call-fab{position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:90;background:var(--blue);color:#fff;text-align:center;padding:1rem;border-radius:8px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.35);font-family:var(--disp);text-transform:uppercase;letter-spacing:.05em}
+@media(min-width:760px){.call-fab{left:auto;right:1.5rem;bottom:1.5rem;border-radius:999px;padding:1rem 1.7rem}}
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="business.business" />
-  <meta property="og:title" content="Lilac Bakery — Artisan Bakery in St Thomas, Exeter" />
-  <meta property="og:description" content="Sourdough, pastries and custom cakes — everything handmade on site at 59 Cowick Street, Exeter. Pre-order ahead." />
-  <meta property="og:url" content="https://www.lilacbakery.co.uk/" />
-  <meta property="og:image" content="https://www.lilacbakery.co.uk/assets/og-image.jpg" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:site_name" content="Lilac Bakery" />
+nav{position:sticky;top:0;z-index:50;background:var(--black);color:#fff}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.25rem}
+.logo{font-family:var(--disp);font-size:1.3rem;font-weight:700;color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.logo span{color:var(--blue)}
+.nav-links{display:none;gap:1.5rem;list-style:none}
+.nav-links a{color:#bbb;text-decoration:none;font-size:.9rem;font-weight:500}
+.nav-links a:hover{color:#fff}
+@media(min-width:760px){.nav-links{display:flex}}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lilac Bakery — Artisan Bakery in St Thomas, Exeter" />
-  <meta name="twitter:description" content="Sourdough, pastries and custom cakes, handmade on site on Cowick Street, Exeter." />
-  <meta name="twitter:image" content="https://www.lilacbakery.co.uk/assets/og-image.jpg" />
+.hero{background:var(--black);color:#fff;padding:4.5rem 1.25rem 5rem;text-align:center}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p.lede{max-width:30rem;margin:1.2rem auto 1.6rem;color:#b9b9b9;font-size:1.05rem}
 
-  <!-- Icons -->
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-  <link rel="apple-touch-icon" href="assets/logo.svg" />
+/* Wait status — driven by status.json */
+.status-pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--black-soft);border:1px solid #333;border-radius:999px;padding:.7rem 1.4rem;margin-bottom:1.8rem;font-size:.95rem;font-weight:600}
+.status-dot{width:11px;height:11px;border-radius:50%;background:#888}
+.status-pill.quiet .status-dot{background:#3ddc6a;box-shadow:0 0 10px rgba(61,220,106,.7)}
+.status-pill.busy .status-dot{background:#ff9f2e;box-shadow:0 0 10px rgba(255,159,46,.7)}
+.status-pill .status-sub{color:#999;font-weight:400;font-size:.83rem}
 
-  <!-- Fonts: Fraunces (display serif) + Jost (clean geometric sans, mirrors the wordmark) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+/* Price hero list */
+.price-hero{max-width:430px;margin:2.2rem auto 0;background:var(--black-soft);border:1px solid #333;border-radius:14px;padding:1.6rem 1.5rem;text-align:left}
+.price-hero h3{color:#fff;font-size:1.05rem;margin-bottom:.8rem;letter-spacing:.1em}
+.price-hero ul{list-style:none}
+.price-hero li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px dashed #383838;font-size:.95rem;color:#ddd}
+.price-hero li:last-child{border:none}
+.price-hero li strong{color:var(--blue);font-family:var(--disp);font-size:1.05rem}
 
-  <link rel="stylesheet" href="styles.css" />
+.grid{display:grid;gap:1.2rem;margin-top:2rem}
+@media(min-width:680px){.grid--3{grid-template-columns:repeat(3,1fr)}.grid--2{grid-template-columns:1fr 1fr}}
+.svc{background:var(--grey);border-radius:10px;padding:1.4rem;border-left:4px solid var(--blue)}
+.svc h3{font-size:1.1rem;margin-bottom:.3rem}
+.svc p{font-size:.9rem;color:var(--ink-soft)}
+.svc .p{font-family:var(--disp);font-size:1.25rem;display:block;margin-top:.6rem}
 
-  <!-- Local Business structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Bakery",
-    "@id": "https://www.lilacbakery.co.uk/#bakery",
-    "name": "Lilac Bakery",
-    "alternateName": "Lilac Bakery Exeter",
-    "description": "Artisan neighbourhood bakery and cafe in St Thomas, Exeter. Sourdough breads, viennoiserie, pastries and custom celebration cakes — everything handmade on site.",
-    "url": "https://www.lilacbakery.co.uk/",
-    "image": "https://www.lilacbakery.co.uk/assets/og-image.jpg",
-    "logo": "https://www.lilacbakery.co.uk/assets/logo.svg",
-    "priceRange": "££",
-    "servesCuisine": ["Bakery", "Cafe", "Coffee", "Pastries"],
-    "currenciesAccepted": "GBP",
-    "paymentAccepted": "Cash, Credit Card, Debit Card, Contactless",
-    "telephone": "+44-1392-000000",
-    "email": "hello@lilacbakery.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "59 Cowick Street",
-      "addressLocality": "St Thomas, Exeter",
-      "addressRegion": "Devon",
-      "postalCode": "EX4 1HR",
-      "addressCountry": "GB"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 50.7186,
-      "longitude": -3.5421
-    },
-    "hasMap": "https://www.google.com/maps?q=59+Cowick+Street,+Exeter+EX4+1HR",
-    "sameAs": [
-      "https://www.instagram.com/lilacbakery.exeter/"
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "15:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "14:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "09:30",
-        "closes": "13:00"
-      }
-    ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Exeter"
-    }
-  }
-  </script>
+.gallery{background:var(--black);color:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-top:2rem}
+@media(min-width:760px){.gallery-grid{grid-template-columns:repeat(4,1fr)}}
+.tile{aspect-ratio:3/4;border-radius:8px;background:linear-gradient(160deg,#2a2a2a,#3d3d3d);display:flex;align-items:flex-end;padding:.8rem;font-size:.8rem;color:#999;border:1px solid #333}
+.tile:nth-child(odd){background:linear-gradient(200deg,#262626,#1f2c4d)}
+
+.review{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.4rem}
+.review .stars{color:var(--blue);letter-spacing:.15em;margin-bottom:.5rem}
+.review p{font-size:.92rem;color:var(--ink-soft);font-style:italic}
+.review cite{display:block;margin-top:.7rem;font-size:.85rem;font-style:normal;font-weight:600}
+
+.hours{list-style:none;margin-top:1rem}
+.hours li{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px dashed var(--line);font-size:.95rem;max-width:22rem}
+.map-embed{border-radius:12px;overflow:hidden;min-height:320px;border:1px solid var(--line)}
+.map-embed iframe{width:100%;height:100%;min-height:320px;border:0}
+.find .wrap{display:grid;gap:2.5rem}
+@media(min-width:820px){.find .wrap{grid-template-columns:1fr 1fr}}
+
+footer{background:var(--black);color:#888;text-align:center;padding:2.5rem 1.25rem 6rem;font-size:.85rem}
+footer a{color:var(--blue)}
+</style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===================== HEADER / NAV ===================== -->
-  <header class="site-header" id="top">
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Lilac Bakery home">
-        <img class="brand__mark" src="assets/logo.svg" width="44" height="44" alt="" />
-        <span class="brand__word">Lilac <span>Bakery</span></span>
-      </a>
+<a class="call-fab" href="tel:+441392000000">✂ Call to book — 01392 000 000</a>
 
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+<nav aria-label="Main">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Best <span>ES</span> Barber</a>
+    <ul class="nav-links">
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <nav class="nav__menu" id="navMenu" aria-label="Primary">
-        <a href="#story">Our Story</a>
-        <a href="#menu">Menu</a>
-        <a href="#order">Pre-Order</a>
-        <a href="#visit">Find Us</a>
-        <a class="btn btn--small" href="#order">Order ahead</a>
-      </nav>
+<header class="hero" id="top">
+  <!-- LIVE WAIT STATUS — reads status.json (owner edits one word: "quiet" or "busy") -->
+  <div class="status-pill" id="status-pill">
+    <span class="status-dot"></span>
+    <span id="status-text">Checking the chair…</span>
+    <span class="status-sub" id="status-sub"></span>
+  </div>
+  <p class="eyebrow">116 Cowick Street · St Thomas · Exeter</p>
+  <h1>Sharp cuts.<br><em>All ages welcome.</em></h1>
+  <p class="lede">Skin fades, scissor cuts, kids' trims and colour — for men, women and everyone in between. Walk in, or call ahead and skip the wait.</p>
+  <a class="btn" href="tel:+441392000000">Call to book</a>
+  <a class="btn btn--white" href="#prices" style="margin-left:.5rem">See prices</a>
+
+  <div class="price-hero">
+    <h3>The Quick List</h3>
+    <ul>
+      <li><span>Men's cut</span><strong>£15</strong></li>
+      <li><span>Skin fade</span><strong>£17</strong></li>
+      <li><span>Kids (under 12)</span><strong>£12</strong></li>
+      <li><span>Cut &amp; beard</span><strong>£22</strong></li>
+    </ul>
+  </div>
+</header>
+
+<section id="prices">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Prices</p>
+    <h2>One shop, every head of hair</h2>
+    <div class="grid grid--3">
+      <div class="svc"><h3>Men's cut</h3><p>Classic or modern, clipper or scissor — finished properly.</p><span class="p">£15</span></div>
+      <div class="svc"><h3>Skin fade</h3><p>Zero to anything, blended sharp. Our signature.</p><span class="p">£17</span></div>
+      <div class="svc"><h3>Women's cut</h3><p>Short cuts, restyles and trims — no salon mark-up.</p><span class="p">from £18</span></div>
+      <div class="svc"><h3>Kids (under 12)</h3><p>Patient, friendly, fast. First-haircut certificates on request.</p><span class="p">£12</span></div>
+      <div class="svc"><h3>Beard trim &amp; shape</h3><p>Lines, length, hot towel finish.</p><span class="p">£8</span></div>
+      <div class="svc"><h3>Colour</h3><p>Full colour, highlights and patch-test first. Ask in shop.</p><span class="p">from £25</span></div>
     </div>
-  </header>
+    <p class="muted" style="margin-top:1.4rem;font-size:.9rem">Card and cash. Prices are placeholders — confirm in shop.</p>
+  </div>
+</section>
 
-  <main id="main">
-
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">Neighbourhood bakery &amp; cafe · St Thomas, Exeter</p>
-          <h1 id="hero-title">Everything handmade,<br />fresh on Cowick Street.</h1>
-          <p class="lede">A small artisan bakery where the sourdough is slow, the pastries are folded by hand, and the coffee&rsquo;s worth lingering over. Pop in, or order ahead so it&rsquo;s ready and waiting.</p>
-          <div class="hero__cta">
-            <a class="btn" href="#order">Pre-order &amp; cake enquiries</a>
-            <a class="btn btn--ghost" href="#menu">See what we bake</a>
-          </div>
-        </div>
-
-        <!-- Fresh Today board (live from Google Sheet) -->
-        <aside class="board" aria-labelledby="board-title">
-          <div class="board__head">
-            <span class="board__chalk">Fresh Today</span>
-            <span class="board__date" id="boardDate"></span>
-          </div>
-          <ul class="board__list" id="freshToday" aria-live="polite">
-            <li class="board__loading">Warming the ovens&hellip;</li>
-          </ul>
-          <p class="board__note">Updated each morning by the bakers. Selling fast — get in early.</p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ===================== OUR STORY ===================== -->
-    <section class="story" id="story" aria-labelledby="story-title">
-      <div class="wrap story__grid">
-        <figure class="story__media">
-          <img src="assets/placeholder.svg" data-photo="storefront" width="600" height="700"
-               alt="The Lilac Bakery shopfront on Cowick Street, Exeter" loading="lazy" />
-        </figure>
-        <div class="story__copy">
-          <p class="eyebrow">Our Story</p>
-          <h2 id="story-title">Two self-taught bakers, one little bakery.</h2>
-          <p>Lilac Bakery started the way the best ones do — at home, with too much flour and a lot of trial and error. We taught ourselves to bake, fell hard for it, and turned a corner shop on Cowick Street into a bakery the neighbourhood actually queues for.</p>
-          <p>Everything is made by us, on site: loaves leavened slowly with our own sourdough starter, viennoiserie laminated by hand, cakes baked to order. Nothing arrives frozen on a lorry. We get in before the sun, and we&rsquo;re proud of every shelf.</p>
-          <ul class="story__marks">
-            <li><strong>Handmade on site</strong><span>Every loaf, bun &amp; bake</span></li>
-            <li><strong>Slow sourdough</strong><span>Our own wild starter</span></li>
-            <li><strong>Featured</strong><span>Britain&rsquo;s Best Bakeries</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== MENU & PASTRIES ===================== -->
-    <section class="menu" id="menu" aria-labelledby="menu-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Menu &amp; Pastries</p>
-          <h2 id="menu-title">The everyday counter</h2>
-          <p class="section-sub">A rotating spread of breads, pastries and cakes. The list shifts with the seasons and the bakers&rsquo; mood — here&rsquo;s what&rsquo;s usually in.</p>
-        </div>
-
-        <div class="gallery">
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="sourdough" width="600" height="600" alt="Crusty sourdough loaves cooling on a rack" loading="lazy" />
-            <figcaption><span class="bake__name">Sourdough Loaves</span><span class="bake__desc">Old granary, oxford common &amp; white — long-proved, open crumb.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="croissant" width="600" height="600" alt="Golden butter croissants" loading="lazy" />
-            <figcaption><span class="bake__name">Butter Croissants</span><span class="bake__desc">Hand-laminated, baked through the morning.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="cardamom" width="600" height="600" alt="Cardamom and cinnamon buns" loading="lazy" />
-            <figcaption><span class="bake__name">Cardamom &amp; Cinnamon Buns</span><span class="bake__desc">Knotted, spiced and pearl-sugared.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="cruffin" width="600" height="600" alt="Tray of cruffins dusted with sugar" loading="lazy" />
-            <figcaption><span class="bake__name">Cruffins &amp; Crème Buns</span><span class="bake__desc">Filled to order — flavours change weekly.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="kouign" width="600" height="600" alt="Caramelised kouign-amann pastry" loading="lazy" />
-            <figcaption><span class="bake__name">Kouign-Amann</span><span class="bake__desc">Caramelised, flaky, slightly addictive.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="pain" width="600" height="600" alt="Pain au chocolat" loading="lazy" />
-            <figcaption><span class="bake__name">Pain au Chocolat</span><span class="bake__desc">Two batons of dark chocolate, properly folded.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="slices" width="600" height="600" alt="Brownies and cake slices" loading="lazy" />
-            <figcaption><span class="bake__name">Cakes &amp; Slices</span><span class="bake__desc">Brownies, frangipane tarts &amp; the bake of the day.</span></figcaption>
-          </figure>
-          <figure class="bake">
-            <img src="assets/placeholder.svg" data-photo="coffee" width="600" height="600" alt="Iced coffee on a wooden table" loading="lazy" />
-            <figcaption><span class="bake__name">Coffee</span><span class="bake__desc">Hot &amp; iced — the perfect pairing for a pastry.</span></figcaption>
-          </figure>
-        </div>
-        <p class="menu__foot">Dietary needs? We usually have vegan &amp; gluten-friendly options — just ask at the counter or in your order.</p>
-      </div>
-    </section>
-
-    <!-- ===================== PRE-ORDER / CUSTOM CAKES ===================== -->
-    <section class="order" id="order" aria-labelledby="order-title">
-      <div class="wrap order__grid">
-        <div class="order__intro">
-          <p class="eyebrow">Pre-Order &amp; Custom Cakes</p>
-          <h2 id="order-title">Order ahead. Skip the queue.</h2>
-          <p>Reserve a loaf before we sell out, put in a pastry box for the weekend, or tell us about a birthday, wedding or celebration cake. We&rsquo;ll confirm everything by email or phone.</p>
-          <ul class="order__points">
-            <li>Bread &amp; pastry pre-orders for collection</li>
-            <li>Custom celebration &amp; occasion cakes</li>
-            <li>Catering, platters &amp; large orders</li>
-          </ul>
-          <p class="order__lead">Please give us <strong>at least 48 hours</strong> for pre-orders and <strong>1 week</strong> for custom cakes.</p>
-        </div>
-
-        <form class="order__form" id="orderForm" novalidate>
-          <div class="field">
-            <label for="name">Your name <span aria-hidden="true">*</span></label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="orderType">What can we make you? <span aria-hidden="true">*</span></label>
-              <select id="orderType" name="orderType" required>
-                <option value="" disabled selected>Choose one&hellip;</option>
-                <option>Bread &amp; pastry pre-order</option>
-                <option>Custom celebration cake</option>
-                <option>Catering / large order</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="date">Collection date <span aria-hidden="true">*</span></label>
-              <input type="date" id="date" name="date" required />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="details">Your order <span aria-hidden="true">*</span></label>
-            <textarea id="details" name="details" rows="4" required
-              placeholder="e.g. 1 old granary loaf + 4 croissants, or: a 8&quot; chocolate cake for 12, &lsquo;Happy 30th Sam&rsquo;, no nuts."></textarea>
-          </div>
-
-          <!-- honeypot (spam trap) -->
-          <div class="hp" aria-hidden="true">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <button class="btn btn--full" type="submit" id="orderSubmit">Send my request</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          <p class="form-fineprint">By sending this you agree to be contacted about your order. We&rsquo;ll never share your details.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===================== INSTAGRAM ===================== -->
-    <section class="insta" id="insta" aria-labelledby="insta-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">@lilacbakery.exeter</p>
-          <h2 id="insta-title">Fresh from the feed</h2>
-          <p class="section-sub">The best of the bake, daily-ish. Follow along on Instagram.</p>
-        </div>
-
-        <!-- Behold live feed: paste your Behold widget id below (see README) -->
-        <div data-behold-id="" id="beholdFeed" class="behold-feed" hidden></div>
-
-        <!-- Fallback grid (shown until Behold is configured) -->
-        <div class="ig-grid" id="igFallback">
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig1" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig2" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig3" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig4" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig5" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig6" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
-        </div>
-        <div class="insta__cta">
-          <a class="btn btn--ghost" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener">Follow @lilacbakery.exeter</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FIND US ===================== -->
-    <section class="visit" id="visit" aria-labelledby="visit-title">
-      <div class="wrap visit__grid">
-        <div class="visit__info">
-          <p class="eyebrow">Find Us</p>
-          <h2 id="visit-title">59 Cowick Street, Exeter</h2>
-          <address class="visit__addr">
-            Lilac Bakery<br />
-            59 Cowick Street<br />
-            St Thomas, Exeter<br />
-            EX4 1HR
-          </address>
-
-          <!-- TODO: replace 01392 000000 / +441392000000 with the bakery's real number -->
-          <ul class="visit__contact">
-            <li>
-              <span class="visit__contact-label">Call to order</span>
-              <a href="tel:+441392000000">01392 000000</a>
-            </li>
-            <li>
-              <span class="visit__contact-label">Email</span>
-              <a href="mailto:hello@lilacbakery.co.uk">hello@lilacbakery.co.uk</a>
-            </li>
-          </ul>
-
-          <h3 class="visit__sub">Opening hours</h3>
-          <table class="hours">
-            <tbody>
-              <tr><th scope="row">Mon &ndash; Fri</th><td>8:00 &ndash; 15:00</td></tr>
-              <tr><th scope="row">Saturday</th><td>9:00 &ndash; 14:00</td></tr>
-              <tr><th scope="row">Sunday</th><td>9:30 &ndash; 13:00</td></tr>
-            </tbody>
-          </table>
-
-          <div class="visit__cta">
-            <a class="btn" href="https://www.google.com/maps?q=59+Cowick+Street,+Exeter+EX4+1HR" target="_blank" rel="noopener">Get directions</a>
-            <a class="btn btn--ghost" href="#order">Pre-order ahead</a>
-          </div>
-        </div>
-
-        <div class="visit__map">
-          <iframe
-            title="Map showing Lilac Bakery at 59 Cowick Street, Exeter"
-            src="https://www.google.com/maps?q=59%20Cowick%20Street,%20Exeter%20EX4%201HR&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="wrap footer__grid">
-      <div class="footer__brand">
-        <img src="assets/logo.svg" width="40" height="40" alt="" />
-        <span class="brand__word">Lilac <span>Bakery</span></span>
-        <p>Artisan bakery &amp; cafe in St Thomas, Exeter. Everything handmade on site.</p>
-      </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="#story">Our Story</a>
-        <a href="#menu">Menu</a>
-        <a href="#order">Pre-Order</a>
-        <a href="#visit">Find Us</a>
-        <a href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener">Instagram</a>
-      </nav>
-      <div class="footer__meta">
-        <p>59 Cowick Street, Exeter EX4 1HR</p>
-        <p>Mon&ndash;Fri 8&ndash;3 · Sat 9&ndash;2 · Sun 9:30&ndash;1</p>
-        <p><a href="tel:+441392000000">01392 000000</a></p>
-        <p><a href="mailto:hello@lilacbakery.co.uk">hello@lilacbakery.co.uk</a></p>
-      </div>
+<section class="gallery" id="gallery">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow">Gallery</p>
+    <h2 style="color:#fff">The proof is on the floor</h2>
+    <div class="gallery-grid">
+      <!-- Swap these for <img loading="lazy"> photos of real cuts -->
+      <div class="tile">skin fade — images/cut1.jpg</div>
+      <div class="tile">scissor crop — images/cut2.jpg</div>
+      <div class="tile">kids' cut — images/cut3.jpg</div>
+      <div class="tile">beard sculpt — images/cut4.jpg</div>
     </div>
-    <div class="wrap footer__base">
-      <p>&copy; <span id="year"></span> Lilac Bakery, Exeter. All rights reserved.</p>
-      <p>Site by <a href="https://charged.studio" target="_blank" rel="noopener">Charged Studio</a></p>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js" defer></script>
+<section id="reviews" style="background:var(--grey)">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow">Reviews</p>
+    <h2>What the chair says</h2>
+    <!-- Replace with real Google reviews, or embed a free Google-reviews widget (Elfsight/SociableKit) -->
+    <div class="grid grid--3" style="text-align:left">
+      <div class="review"><div class="stars">★★★★★</div><p>"Best fade I've had in Exeter, and I've tried them all."</p><cite>— Placeholder review</cite></div>
+      <div class="review"><div class="stars">★★★★★</div><p>"Took my 4-year-old, expected tears — got a high five and a great cut."</p><cite>— Placeholder review</cite></div>
+      <div class="review"><div class="stars">★★★★★</div><p>"Walked in on a Saturday, seen in 20 minutes. Top bloke, top cut."</p><cite>— Placeholder review</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find-us">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Find Us</p>
+      <h2>116 Cowick Street</h2>
+      <p class="muted">St Thomas, Exeter — a minute from the shopping precinct. <a href="tel:+441392000000" style="color:var(--blue);font-weight:600">01392 000 000</a></p>
+      <ul class="hours">
+        <li><span>Monday – Friday</span><span>9am – 6pm</span></li>
+        <li><span>Saturday</span><span>8:30am – 5pm</span></li>
+        <li><span>Sunday</span><span>10am – 4pm</span></li>
+      </ul>
+      <p class="muted" style="margin-top:1rem;font-size:.9rem">Walk-ins always welcome — the status light above tells you how the queue's looking right now.</p>
+    </div>
+    <div class="map-embed">
+      <iframe title="Map to Best ES Barber, 116 Cowick Street, Exeter" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=116+Cowick+Street,+Exeter&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:#fff;font-family:var(--disp);text-transform:uppercase">Best ES Barber</strong> · 116 Cowick Street, St Thomas, Exeter</p>
+  <p style="margin-top:.4rem">Barber St Thomas Exeter · Skin fade Cowick Street · Kids haircut Exeter</p>
+  <p style="margin-top:.4rem"><a href="tel:+441392000000">01392 000 000</a></p>
+</footer>
+
+<script>
+// Wait status: owner edits status.json ("quiet" or "busy") from their phone via the GitHub app.
+fetch('status.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(s => {
+    const pill = document.getElementById('status-pill');
+    const mode = (s.status || '').toLowerCase() === 'busy' ? 'busy' : 'quiet';
+    pill.classList.add(mode);
+    document.getElementById('status-text').textContent =
+      mode === 'busy' ? 'Busy right now' : 'Quiet right now — walk on in';
+    document.getElementById('status-sub').textContent =
+      mode === 'busy' ? (s.busyNote || '~30–45 min wait · call ahead') : (s.quietNote || 'little or no wait');
+  })
+  .catch(() => {
+    document.getElementById('status-text').textContent = 'Call for today\'s wait time';
+  });
+</script>
 </body>
 </html>
