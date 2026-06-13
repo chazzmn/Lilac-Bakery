@@ -1,345 +1,405 @@
-/* =========================================================
-   Lilac Bakery — styles.css
-   Palette: soft lilac · cream · warm charcoal (+ brand teal)
-   Type: Fraunces (display serif) · Jost (clean sans)
-   Mobile-first.
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F7E8A" />
 
-:root {
-  /* colour */
-  --lilac:        #B79CC9;
-  --lilac-deep:   #8E6FA6;
-  --lilac-tint:   #EFE6F3;
-  --lilac-wash:   #F6F0F8;
-  --cream:        #FAF5EC;
-  --cream-deep:   #F2E9D8;
-  --charcoal:     #2E2926;
-  --charcoal-soft:#5A524C;
-  --teal:         #4F7E8A;
-  --teal-deep:    #3C636D;
-  --coral:        #E8694C;
-  --white:        #FFFFFF;
-  --line:         #E7DDCB;
+  <!-- Primary SEO -->
+  <title>Lilac Bakery — Artisan Bakery in St Thomas, Exeter | Sourdough on Cowick Street</title>
+  <meta name="description" content="Lilac Bakery is an artisan neighbourhood bakery & cafe on Cowick Street, St Thomas, Exeter. Sourdough, pastries and custom cakes — everything handmade on site. Pre-order ahead or enquire about a celebration cake." />
+  <meta name="keywords" content="artisan bakery Exeter, bakery St Thomas Exeter, sourdough Cowick Street, Lilac Bakery Exeter, custom cakes Exeter, pastries Exeter, cafe St Thomas" />
+  <link rel="canonical" href="https://www.lilacbakery.co.uk/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="GB-DEV" />
+  <meta name="geo.placename" content="St Thomas, Exeter" />
+  <meta name="geo.position" content="50.7186;-3.5421" />
+  <meta name="ICBM" content="50.7186, -3.5421" />
 
-  /* type */
-  --display: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  <!-- Open Graph -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Lilac Bakery — Artisan Bakery in St Thomas, Exeter" />
+  <meta property="og:description" content="Sourdough, pastries and custom cakes — everything handmade on site at 59 Cowick Street, Exeter. Pre-order ahead." />
+  <meta property="og:url" content="https://www.lilacbakery.co.uk/" />
+  <meta property="og:image" content="https://www.lilacbakery.co.uk/assets/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="Lilac Bakery" />
 
-  /* layout */
-  --wrap: 1140px;
-  --radius: 16px;
-  --radius-sm: 10px;
-  --shadow: 0 18px 50px -24px rgba(46,41,38,0.35);
-  --shadow-sm: 0 6px 22px -14px rgba(46,41,38,0.4);
-  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lilac Bakery — Artisan Bakery in St Thomas, Exeter" />
+  <meta name="twitter:description" content="Sourdough, pastries and custom cakes, handmade on site on Cowick Street, Exeter." />
+  <meta name="twitter:image" content="https://www.lilacbakery.co.uk/assets/og-image.jpg" />
 
-/* ---------- reset ---------- */
-*, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
-}
-body {
-  margin: 0;
-  font-family: var(--sans);
-  font-weight: 400;
-  color: var(--charcoal);
-  background: var(--cream);
-  line-height: 1.6;
-  font-size: 1.0625rem;
-  -webkit-font-smoothing: antialiased;
-}
-img, svg, iframe { display: block; max-width: 100%; }
-img { height: auto; }
-a { color: inherit; text-decoration: none; }
-button { font-family: inherit; cursor: pointer; }
-h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; margin: 0; }
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/logo.svg" />
 
-.wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 22px; }
+  <!-- Fonts: Fraunces (display serif) + Jost (clean geometric sans, mirrors the wordmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-.skip-link {
-  position: absolute; left: -999px; top: 0; z-index: 200;
-  background: var(--charcoal); color: var(--cream);
-  padding: 10px 16px; border-radius: 0 0 10px 0;
-}
-.skip-link:focus { left: 0; }
+  <link rel="stylesheet" href="styles.css" />
 
-:focus-visible { outline: 3px solid var(--lilac-deep); outline-offset: 2px; border-radius: 4px; }
-
-/* ---------- shared bits ---------- */
-.eyebrow {
-  font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--lilac-deep); font-weight: 500; margin: 0 0 0.9rem;
-}
-.lede { font-size: 1.18rem; color: var(--charcoal-soft); max-width: 40ch; }
-.section-head { max-width: 60ch; margin: 0 auto 2.6rem; text-align: center; }
-.section-head h2 { font-size: clamp(2rem, 6vw, 2.9rem); }
-.section-sub { color: var(--charcoal-soft); margin-top: 0.8rem; }
-
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
-  background: var(--charcoal); color: var(--cream);
-  padding: 0.85em 1.5em; border: 1.5px solid var(--charcoal);
-  border-radius: 999px; font-weight: 500; font-size: 1rem; letter-spacing: 0.01em;
-  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
-}
-.btn:hover { background: var(--lilac-deep); border-color: var(--lilac-deep); transform: translateY(-2px); }
-.btn--ghost { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
-.btn--ghost:hover { background: var(--charcoal); color: var(--cream); transform: translateY(-2px); }
-.btn--small { padding: 0.55em 1.1em; font-size: 0.9rem; }
-.btn--full { width: 100%; padding: 1em; font-size: 1.05rem; }
-
-/* ---------- header / nav ---------- */
-.site-header {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(250,245,236,0.82);
-  backdrop-filter: saturate(150%) blur(12px);
-  -webkit-backdrop-filter: saturate(150%) blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.nav { display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
-.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
-.brand__mark { border-radius: 50%; }
-.brand__word {
-  font-family: var(--sans); font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.16em; font-size: 1.02rem; color: var(--charcoal);
-}
-.brand__word span { font-weight: 300; }
-
-.nav__menu { display: flex; align-items: center; gap: 1.6rem; }
-/* Scope the link colour to non-button links so the .btn CTA keeps its own
-   (cream-on-charcoal) colours — otherwise the "Order ahead" button renders
-   charcoal text on a charcoal pill and is invisible. */
-.nav__menu a:not(.btn) { position: relative; font-weight: 400; font-size: 0.98rem; letter-spacing: 0.01em; color: var(--charcoal); }
-.nav__menu a:not(.btn)::after {
-  content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 0;
-  background: var(--lilac-deep); transition: width 0.28s var(--ease);
-}
-.nav__menu a:not(.btn):hover::after,
-.nav__menu a:not(.btn).is-active::after { width: 100%; }
-.nav__menu a:not(.btn).is-active { color: var(--lilac-deep); }
-
-.nav__toggle {
-  display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px;
-}
-.nav__toggle span { width: 26px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: transform 0.3s var(--ease), opacity 0.3s var(--ease); }
-.nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-@media (max-width: 820px) {
-  .nav__toggle { display: flex; }
-  .nav__menu {
-    position: fixed; inset: 68px 0 auto 0;
-    flex-direction: column; align-items: flex-start; gap: 0;
-    background: var(--cream); border-bottom: 1px solid var(--line);
-    padding: 0.5rem 22px 1.4rem;
-    transform: translateY(-12px); opacity: 0; pointer-events: none;
-    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
-    box-shadow: var(--shadow);
+  <!-- Local Business structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "@id": "https://www.lilacbakery.co.uk/#bakery",
+    "name": "Lilac Bakery",
+    "alternateName": "Lilac Bakery Exeter",
+    "description": "Artisan neighbourhood bakery and cafe in St Thomas, Exeter. Sourdough breads, viennoiserie, pastries and custom celebration cakes — everything handmade on site.",
+    "url": "https://www.lilacbakery.co.uk/",
+    "image": "https://www.lilacbakery.co.uk/assets/og-image.jpg",
+    "logo": "https://www.lilacbakery.co.uk/assets/logo.svg",
+    "priceRange": "££",
+    "servesCuisine": ["Bakery", "Cafe", "Coffee", "Pastries"],
+    "currenciesAccepted": "GBP",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, Contactless",
+    "telephone": "+44-1392-000000",
+    "email": "hello@lilacbakery.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "59 Cowick Street",
+      "addressLocality": "St Thomas, Exeter",
+      "addressRegion": "Devon",
+      "postalCode": "EX4 1HR",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.7186,
+      "longitude": -3.5421
+    },
+    "hasMap": "https://www.google.com/maps?q=59+Cowick+Street,+Exeter+EX4+1HR",
+    "sameAs": [
+      "https://www.instagram.com/lilacbakery.exeter/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:30",
+        "closes": "13:00"
+      }
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Exeter"
+    }
   }
-  .nav__menu.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-  .nav__menu a { width: 100%; padding: 0.85rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
-  .nav__menu a.btn { margin-top: 1rem; border-bottom: 1.5px solid var(--charcoal); justify-content: center; }
-}
+  </script>
+</head>
 
-/* ---------- hero ---------- */
-.hero {
-  background:
-    radial-gradient(120% 120% at 85% 0%, var(--lilac-tint) 0%, transparent 55%),
-    linear-gradient(180deg, var(--cream) 0%, var(--cream) 60%, var(--lilac-wash) 100%);
-  padding: clamp(2.5rem, 8vw, 5.5rem) 0 clamp(3rem, 8vw, 5rem);
-  overflow: hidden;
-}
-.hero__grid { display: grid; gap: 2.5rem; align-items: center; }
-.hero h1 { font-size: clamp(2.5rem, 9vw, 4.4rem); }
-.hero .lede { margin-top: 1.3rem; }
-.hero__cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-/* Fresh Today board */
-.board {
-  background: var(--teal);
-  color: var(--cream);
-  border-radius: var(--radius);
-  padding: 1.5rem 1.5rem 1.3rem;
-  box-shadow: var(--shadow);
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-.board::before {
-  content: ""; position: absolute; inset: 8px; border: 1.5px dashed rgba(255,255,255,0.28);
-  border-radius: 11px; pointer-events: none;
-}
-.board__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.6rem; }
-.board__chalk { font-family: var(--display); font-style: italic; font-size: 1.7rem; color: #fff; }
-.board__date { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
-.board__list { list-style: none; margin: 0; padding: 0; }
-.board__list li {
-  display: flex; align-items: baseline; gap: 0.6rem; padding: 0.5rem 0;
-  border-bottom: 1px dotted rgba(255,255,255,0.25); font-size: 1.05rem;
-}
-.board__list li:last-child { border-bottom: 0; }
-.board__item-name { font-weight: 500; }
-.board__item-note { font-size: 0.85rem; opacity: 0.85; margin-left: auto; text-align: right; }
-.board__tag {
-  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em;
-  padding: 0.15em 0.6em; border-radius: 999px; margin-left: auto; white-space: nowrap;
-}
-.board__tag--out { background: var(--coral); color: #fff; }
-.board__tag--low { background: var(--lilac); color: var(--charcoal); }
-.board__list li.sold-out .board__item-name { opacity: 0.55; text-decoration: line-through; }
-.board__loading { opacity: 0.8; font-style: italic; }
-.board__note { font-size: 0.82rem; opacity: 0.8; margin: 0.9rem 0 0; }
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Lilac Bakery home">
+        <img class="brand__mark" src="assets/logo.svg" width="44" height="44" alt="" />
+        <span class="brand__word">Lilac <span>Bakery</span></span>
+      </a>
 
-@media (min-width: 880px) {
-  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; }
-}
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
 
-/* ---------- our story ---------- */
-.story { padding: clamp(3.5rem, 9vw, 6rem) 0; }
-.story__grid { display: grid; gap: 2.5rem; align-items: center; }
-.story__media img {
-  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);
-  object-fit: cover; aspect-ratio: 6 / 7; background: var(--lilac-wash);
-}
-.story h2 { font-size: clamp(1.9rem, 6vw, 2.8rem); margin-bottom: 1.1rem; }
-.story p { color: var(--charcoal-soft); margin: 0 0 1.1rem; max-width: 52ch; }
-.story__marks {
-  list-style: none; display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; padding: 1.4rem 0 0; margin: 1rem 0 0; border-top: 1px solid var(--line);
-}
-.story__marks li { display: flex; flex-direction: column; }
-.story__marks strong { font-family: var(--display); font-size: 1.05rem; color: var(--charcoal); }
-.story__marks span { font-size: 0.85rem; color: var(--charcoal-soft); }
-@media (min-width: 880px) {
-  .story__grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; }
-}
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Pre-Order</a>
+        <a href="#visit">Find Us</a>
+        <a class="btn btn--small" href="#order">Order ahead</a>
+      </nav>
+    </div>
+  </header>
 
-/* ---------- menu / gallery ---------- */
-.menu { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--lilac-wash); }
-.gallery {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
-}
-.bake {
-  margin: 0; background: var(--white); border-radius: var(--radius);
-  overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
-}
-.bake:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.bake img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--lilac-wash); }
-.bake figcaption { padding: 0.95rem 1.05rem 1.15rem; display: flex; flex-direction: column; gap: 0.25rem; }
-.bake__name { font-family: var(--display); font-size: 1.12rem; color: var(--charcoal); }
-.bake__desc { font-size: 0.88rem; color: var(--charcoal-soft); line-height: 1.45; }
-.menu__foot { text-align: center; color: var(--charcoal-soft); margin-top: 2rem; font-size: 0.95rem; }
-@media (min-width: 720px) { .gallery { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
-@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+  <main id="main">
 
-/* ---------- order form ---------- */
-.order { padding: clamp(3.5rem, 9vw, 6rem) 0; }
-.order__grid { display: grid; gap: 2.5rem; align-items: start; }
-.order h2 { font-size: clamp(1.9rem, 6vw, 2.8rem); margin-bottom: 1rem; }
-.order__intro p { color: var(--charcoal-soft); max-width: 46ch; }
-.order__points { list-style: none; padding: 0; margin: 1.4rem 0; display: grid; gap: 0.6rem; }
-.order__points li { position: relative; padding-left: 1.7rem; }
-.order__points li::before {
-  content: ""; position: absolute; left: 0; top: 0.55em; width: 0.6rem; height: 0.6rem;
-  background: var(--lilac); border-radius: 50%;
-}
-.order__lead {
-  background: var(--lilac-tint); border-radius: var(--radius-sm);
-  padding: 0.9rem 1.1rem; font-size: 0.95rem; color: var(--charcoal); max-width: none;
-}
-.order__form {
-  background: var(--white); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow-sm);
-}
-.field { display: flex; flex-direction: column; margin-bottom: 1.1rem; }
-.field-row { display: grid; gap: 1.1rem; }
-.field label { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--charcoal); }
-.field label span { color: var(--coral); }
-.field input, .field select, .field textarea {
-  font-family: var(--sans); font-size: 1rem; color: var(--charcoal);
-  background: var(--cream); border: 1.5px solid var(--line);
-  border-radius: var(--radius-sm); padding: 0.72em 0.9em; width: 100%;
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
-}
-.field textarea { resize: vertical; min-height: 110px; }
-.field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--lilac-deep); background: var(--white);
-}
-/* Only flag fields as invalid AFTER the user has interacted with them.
-   The old `:invalid:not(:placeholder-shown)` rule turned empty required
-   fields red on page load (inputs with no placeholder never match
-   :placeholder-shown). :user-invalid is the correct, well-supported tool. */
-.field input:user-invalid,
-.field select:user-invalid,
-.field textarea:user-invalid { border-color: var(--coral); }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.form-status { margin: 0.9rem 0 0; font-size: 0.95rem; min-height: 1.2em; }
-.form-status.ok { color: var(--teal-deep); font-weight: 500; }
-.form-status.err { color: var(--coral); font-weight: 500; }
-.form-fineprint { font-size: 0.78rem; color: var(--charcoal-soft); margin: 0.8rem 0 0; }
-.btn[aria-busy="true"] { opacity: 0.7; pointer-events: none; }
-@media (min-width: 560px) { .field-row { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 920px) { .order__grid { grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; } }
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Neighbourhood bakery &amp; cafe · St Thomas, Exeter</p>
+          <h1 id="hero-title">Everything handmade,<br />fresh on Cowick Street.</h1>
+          <p class="lede">A small artisan bakery where the sourdough is slow, the pastries are folded by hand, and the coffee&rsquo;s worth lingering over. Pop in, or order ahead so it&rsquo;s ready and waiting.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#order">Pre-order &amp; cake enquiries</a>
+            <a class="btn btn--ghost" href="#menu">See what we bake</a>
+          </div>
+        </div>
 
-/* ---------- instagram ---------- */
-.insta { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--lilac-wash); }
-.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
-.ig-tile { display: block; overflow: hidden; border-radius: var(--radius-sm); }
-.ig-tile img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.4s var(--ease); background: var(--lilac-tint); }
-.ig-tile:hover img { transform: scale(1.06); }
-.behold-feed { --behold-row-gap: 0.7rem; --behold-column-gap: 0.7rem; --behold-border-radius: 10px; }
-.insta__cta { text-align: center; margin-top: 2rem; }
-@media (min-width: 760px) { .ig-grid { grid-template-columns: repeat(6, 1fr); } }
+        <!-- Fresh Today board (live from Google Sheet) -->
+        <aside class="board" aria-labelledby="board-title">
+          <div class="board__head">
+            <span class="board__chalk">Fresh Today</span>
+            <span class="board__date" id="boardDate"></span>
+          </div>
+          <ul class="board__list" id="freshToday" aria-live="polite">
+            <li class="board__loading">Warming the ovens&hellip;</li>
+          </ul>
+          <p class="board__note">Updated each morning by the bakers. Selling fast — get in early.</p>
+        </aside>
+      </div>
+    </section>
 
-/* ---------- find us ---------- */
-.visit { padding: clamp(3.5rem, 9vw, 6rem) 0; }
-.visit__grid { display: grid; gap: 2.5rem; align-items: stretch; }
-.visit h2 { font-size: clamp(1.9rem, 6vw, 2.6rem); margin-bottom: 1.1rem; }
-.visit__addr { font-style: normal; font-size: 1.1rem; line-height: 1.7; color: var(--charcoal-soft); }
-.visit__contact { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: 0.7rem; }
-.visit__contact li { display: flex; flex-direction: column; gap: 0.1rem; }
-.visit__contact-label { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lilac-deep); font-weight: 500; }
-.visit__contact a { font-size: 1.1rem; color: var(--charcoal); border-bottom: 1px solid transparent; width: fit-content; transition: border-color 0.2s var(--ease); }
-.visit__contact a:hover { border-bottom-color: var(--lilac-deep); }
-.visit__sub { font-family: var(--display); font-size: 1.25rem; margin: 1.6rem 0 0.6rem; }
-.hours { border-collapse: collapse; width: 100%; max-width: 340px; }
-.hours th, .hours td { text-align: left; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-weight: 400; }
-.hours th { color: var(--charcoal); font-weight: 500; }
-.hours td { color: var(--charcoal-soft); text-align: right; }
-.visit__cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
-.visit__map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 320px; }
-.visit__map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; }
-@media (min-width: 880px) { .visit__grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; } }
+    <!-- ===================== OUR STORY ===================== -->
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="wrap story__grid">
+        <figure class="story__media">
+          <img src="assets/placeholder.svg" data-photo="storefront" width="600" height="700"
+               alt="The Lilac Bakery shopfront on Cowick Street, Exeter" loading="lazy" />
+        </figure>
+        <div class="story__copy">
+          <p class="eyebrow">Our Story</p>
+          <h2 id="story-title">Two self-taught bakers, one little bakery.</h2>
+          <p>Lilac Bakery started the way the best ones do — at home, with too much flour and a lot of trial and error. We taught ourselves to bake, fell hard for it, and turned a corner shop on Cowick Street into a bakery the neighbourhood actually queues for.</p>
+          <p>Everything is made by us, on site: loaves leavened slowly with our own sourdough starter, viennoiserie laminated by hand, cakes baked to order. Nothing arrives frozen on a lorry. We get in before the sun, and we&rsquo;re proud of every shelf.</p>
+          <ul class="story__marks">
+            <li><strong>Handmade on site</strong><span>Every loaf, bun &amp; bake</span></li>
+            <li><strong>Slow sourdough</strong><span>Our own wild starter</span></li>
+            <li><strong>Featured</strong><span>Britain&rsquo;s Best Bakeries</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-/* ---------- footer ---------- */
-.site-footer { background: var(--charcoal); color: var(--cream); padding: clamp(2.5rem, 7vw, 4rem) 0 1.6rem; }
-.footer__grid { display: grid; gap: 2rem; }
-.footer__brand { display: grid; gap: 0.6rem; max-width: 32ch; }
-.footer__brand .brand__word { color: var(--cream); }
-.footer__brand .brand__word span { font-weight: 300; }
-.footer__brand img { border-radius: 50%; }
-.footer__brand p { color: rgba(250,245,236,0.7); font-size: 0.92rem; margin: 0.3rem 0 0; }
-.footer__nav { display: flex; flex-direction: column; gap: 0.6rem; }
-.footer__nav a { color: rgba(250,245,236,0.85); }
-.footer__nav a:hover { color: var(--lilac); }
-.footer__meta p { color: rgba(250,245,236,0.7); margin: 0 0 0.4rem; font-size: 0.92rem; }
-.footer__meta a { color: rgba(250,245,236,0.85); border-bottom: 1px solid transparent; transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
-.footer__meta a:hover { color: var(--lilac); border-bottom-color: var(--lilac); }
-.footer__base {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem;
-  margin-top: 2.5rem; padding-top: 1.4rem; border-top: 1px solid rgba(250,245,236,0.16);
-  font-size: 0.82rem; color: rgba(250,245,236,0.6);
-}
-.footer__base a { color: var(--lilac); }
-.footer__base a:hover { text-decoration: underline; }
-@media (min-width: 760px) {
-  .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
-}
+    <!-- ===================== MENU & PASTRIES ===================== -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Menu &amp; Pastries</p>
+          <h2 id="menu-title">The everyday counter</h2>
+          <p class="section-sub">A rotating spread of breads, pastries and cakes. The list shifts with the seasons and the bakers&rsquo; mood — here&rsquo;s what&rsquo;s usually in.</p>
+        </div>
 
-/* ---------- reveal on scroll ---------- */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
-.reveal.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+        <div class="gallery">
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="sourdough" width="600" height="600" alt="Crusty sourdough loaves cooling on a rack" loading="lazy" />
+            <figcaption><span class="bake__name">Sourdough Loaves</span><span class="bake__desc">Old granary, oxford common &amp; white — long-proved, open crumb.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="croissant" width="600" height="600" alt="Golden butter croissants" loading="lazy" />
+            <figcaption><span class="bake__name">Butter Croissants</span><span class="bake__desc">Hand-laminated, baked through the morning.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="cardamom" width="600" height="600" alt="Cardamom and cinnamon buns" loading="lazy" />
+            <figcaption><span class="bake__name">Cardamom &amp; Cinnamon Buns</span><span class="bake__desc">Knotted, spiced and pearl-sugared.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="cruffin" width="600" height="600" alt="Tray of cruffins dusted with sugar" loading="lazy" />
+            <figcaption><span class="bake__name">Cruffins &amp; Crème Buns</span><span class="bake__desc">Filled to order — flavours change weekly.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="kouign" width="600" height="600" alt="Caramelised kouign-amann pastry" loading="lazy" />
+            <figcaption><span class="bake__name">Kouign-Amann</span><span class="bake__desc">Caramelised, flaky, slightly addictive.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="pain" width="600" height="600" alt="Pain au chocolat" loading="lazy" />
+            <figcaption><span class="bake__name">Pain au Chocolat</span><span class="bake__desc">Two batons of dark chocolate, properly folded.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="slices" width="600" height="600" alt="Brownies and cake slices" loading="lazy" />
+            <figcaption><span class="bake__name">Cakes &amp; Slices</span><span class="bake__desc">Brownies, frangipane tarts &amp; the bake of the day.</span></figcaption>
+          </figure>
+          <figure class="bake">
+            <img src="assets/placeholder.svg" data-photo="coffee" width="600" height="600" alt="Iced coffee on a wooden table" loading="lazy" />
+            <figcaption><span class="bake__name">Coffee</span><span class="bake__desc">Hot &amp; iced — the perfect pairing for a pastry.</span></figcaption>
+          </figure>
+        </div>
+        <p class="menu__foot">Dietary needs? We usually have vegan &amp; gluten-friendly options — just ask at the counter or in your order.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PRE-ORDER / CUSTOM CAKES ===================== -->
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div class="wrap order__grid">
+        <div class="order__intro">
+          <p class="eyebrow">Pre-Order &amp; Custom Cakes</p>
+          <h2 id="order-title">Order ahead. Skip the queue.</h2>
+          <p>Reserve a loaf before we sell out, put in a pastry box for the weekend, or tell us about a birthday, wedding or celebration cake. We&rsquo;ll confirm everything by email or phone.</p>
+          <ul class="order__points">
+            <li>Bread &amp; pastry pre-orders for collection</li>
+            <li>Custom celebration &amp; occasion cakes</li>
+            <li>Catering, platters &amp; large orders</li>
+          </ul>
+          <p class="order__lead">Please give us <strong>at least 48 hours</strong> for pre-orders and <strong>1 week</strong> for custom cakes.</p>
+        </div>
+
+        <form class="order__form" id="orderForm" novalidate>
+          <div class="field">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="orderType">What can we make you? <span aria-hidden="true">*</span></label>
+              <select id="orderType" name="orderType" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>Bread &amp; pastry pre-order</option>
+                <option>Custom celebration cake</option>
+                <option>Catering / large order</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date">Collection date <span aria-hidden="true">*</span></label>
+              <input type="date" id="date" name="date" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="details">Your order <span aria-hidden="true">*</span></label>
+            <textarea id="details" name="details" rows="4" required
+              placeholder="e.g. 1 old granary loaf + 4 croissants, or: a 8&quot; chocolate cake for 12, &lsquo;Happy 30th Sam&rsquo;, no nuts."></textarea>
+          </div>
+
+          <!-- honeypot (spam trap) -->
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="btn btn--full" type="submit" id="orderSubmit">Send my request</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-fineprint">By sending this you agree to be contacted about your order. We&rsquo;ll never share your details.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section class="insta" id="insta" aria-labelledby="insta-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">@lilacbakery.exeter</p>
+          <h2 id="insta-title">Fresh from the feed</h2>
+          <p class="section-sub">The best of the bake, daily-ish. Follow along on Instagram.</p>
+        </div>
+
+        <!-- Behold live feed: paste your Behold widget id below (see README) -->
+        <div data-behold-id="" id="beholdFeed" class="behold-feed" hidden></div>
+
+        <!-- Fallback grid (shown until Behold is configured) -->
+        <div class="ig-grid" id="igFallback">
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig1" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig2" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig3" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig4" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig5" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+          <a class="ig-tile" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener"><img src="assets/placeholder.svg" data-photo="ig6" width="400" height="400" alt="Instagram post from Lilac Bakery" loading="lazy" /></a>
+        </div>
+        <div class="insta__cta">
+          <a class="btn btn--ghost" href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener">Follow @lilacbakery.exeter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FIND US ===================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit__grid">
+        <div class="visit__info">
+          <p class="eyebrow">Find Us</p>
+          <h2 id="visit-title">59 Cowick Street, Exeter</h2>
+          <address class="visit__addr">
+            Lilac Bakery<br />
+            59 Cowick Street<br />
+            St Thomas, Exeter<br />
+            EX4 1HR
+          </address>
+
+          <!-- TODO: replace 01392 000000 / +441392000000 with the bakery's real number -->
+          <ul class="visit__contact">
+            <li>
+              <span class="visit__contact-label">Call to order</span>
+              <a href="tel:+441392000000">01392 000000</a>
+            </li>
+            <li>
+              <span class="visit__contact-label">Email</span>
+              <a href="mailto:hello@lilacbakery.co.uk">hello@lilacbakery.co.uk</a>
+            </li>
+          </ul>
+
+          <h3 class="visit__sub">Opening hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Mon &ndash; Fri</th><td>8:00 &ndash; 15:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>9:00 &ndash; 14:00</td></tr>
+              <tr><th scope="row">Sunday</th><td>9:30 &ndash; 13:00</td></tr>
+            </tbody>
+          </table>
+
+          <div class="visit__cta">
+            <a class="btn" href="https://www.google.com/maps?q=59+Cowick+Street,+Exeter+EX4+1HR" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn--ghost" href="#order">Pre-order ahead</a>
+          </div>
+        </div>
+
+        <div class="visit__map">
+          <iframe
+            title="Map showing Lilac Bakery at 59 Cowick Street, Exeter"
+            src="https://www.google.com/maps?q=59%20Cowick%20Street,%20Exeter%20EX4%201HR&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo.svg" width="40" height="40" alt="" />
+        <span class="brand__word">Lilac <span>Bakery</span></span>
+        <p>Artisan bakery &amp; cafe in St Thomas, Exeter. Everything handmade on site.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Pre-Order</a>
+        <a href="#visit">Find Us</a>
+        <a href="https://www.instagram.com/lilacbakery.exeter/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <div class="footer__meta">
+        <p>59 Cowick Street, Exeter EX4 1HR</p>
+        <p>Mon&ndash;Fri 8&ndash;3 · Sat 9&ndash;2 · Sun 9:30&ndash;1</p>
+        <p><a href="tel:+441392000000">01392 000000</a></p>
+        <p><a href="mailto:hello@lilacbakery.co.uk">hello@lilacbakery.co.uk</a></p>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <p>&copy; <span id="year"></span> Lilac Bakery, Exeter. All rights reserved.</p>
+      <p>Site by <a href="https://charged.studio" target="_blank" rel="noopener">Charged Studio</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

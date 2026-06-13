@@ -1,0 +1,14 @@
+{
+  "name": "lilac-bakery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-page site for Lilac Bakery, St Thomas, Exeter — artisan bakery & cafe.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
