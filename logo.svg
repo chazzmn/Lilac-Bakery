@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lilac Bakery logo — a person sitting and holding a cup of coffee">
+  <defs>
+    <clipPath id="circleClip"><circle cx="256" cy="256" r="246"/></clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="246" fill="#4F7E8A"/>
+  <g clip-path="url(#circleClip)">
+    <!-- back / hip shadow -->
+    <path d="M300 360c54 4 96-30 104-92 7-58-22-104-44-128-12 40-30 70-70 96-46 30-72 70-66 96 4 18 38 26 76 28z" fill="#0f2b33" opacity="0.18"/>
+    <!-- far leg (dark trousers) -->
+    <path d="M318 352c-30 8-150 26-176 30-16 3-30-4-31-18-1-12 9-19 26-23 44-10 120-30 150-40z" fill="#1d232b"/>
+    <!-- near leg, bent knee -->
+    <path d="M150 392c-14 0-24-9-24-22 0-10 6-16 16-22 40-24 96-58 132-86l40 46c-34 28-88 64-128 86-12 6-24-2-36-2z" fill="#272f39"/>
+    <!-- shoe -->
+    <path d="M120 372c-18 2-32 10-34 24-1 9 6 14 18 14 22 0 44-10 52-24z" fill="#11161c"/>
+    <!-- jacket / torso, leaning back -->
+    <path d="M286 372c-34-2-58-18-62-44-5-30 8-66 36-104 24-32 58-56 92-58 30-2 50 20 54 56 5 44-12 96-46 130-22 22-48 22-74 20z" fill="#A7C7CC"/>
+    <!-- jacket fold shadow -->
+    <path d="M300 360c-22-2-38-14-40-34-3-22 8-52 30-82 6 30 6 78-2 116z" fill="#8FB3BA" opacity="0.7"/>
+    <!-- extended arm / sleeve to the cup -->
+    <path d="M330 214c-30-6-72 6-118 36-14 9-18 24-9 36 8 11 23 12 37 4 38-22 74-30 104-26z" fill="#A7C7CC"/>
+    <!-- forearm shading -->
+    <path d="M250 268c-20 12-34 16-44 14 8 9 22 9 35 1z" fill="#8FB3BA" opacity="0.6"/>
+    <!-- hand -->
+    <ellipse cx="206" cy="270" rx="16" ry="14" fill="#E9A982" transform="rotate(-18 206 270)"/>
+    <!-- saucer -->
+    <ellipse cx="176" cy="288" rx="34" ry="9" fill="#ffffff"/>
+    <ellipse cx="176" cy="287" rx="34" ry="7" fill="#e7eef0"/>
+    <!-- cup -->
+    <path d="M150 256h52a4 4 0 0 1 4 4v6c0 16-13 26-30 26s-30-10-30-26v-6a4 4 0 0 1 4-4z" fill="#ffffff"/>
+    <path d="M206 260c12 0 18 6 18 14s-8 14-18 13z" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+    <!-- steam -->
+    <path d="M168 236c-6-8 6-14 0-22M188 236c-6-8 6-14 0-22" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <!-- neck -->
+    <path d="M348 150l22 30-30 18-16-26z" fill="#E9A982"/>
+    <!-- head -->
+    <circle cx="372" cy="150" r="42" fill="#E9A982"/>
+    <!-- beard / hair -->
+    <path d="M348 138c-6 26 6 50 30 56 8 2 16 1 22-2-2 14-16 24-34 22-26-3-42-26-38-52 2-12 10-20 20-24z" fill="#1d232b"/>
+    <path d="M398 120c10 6 16 18 14 32-2-2-8-4-14-4-2-12-2-20 0-28z" fill="#1d232b"/>
+    <!-- ear -->
+    <circle cx="404" cy="158" r="7" fill="#E9A982"/>
+    <!-- flat cap -->
+    <path d="M334 124c4-26 26-44 54-42 26 2 44 22 42 44-2 2-6 3-10 2-30-8-58-8-78 0-4 1-7 0-8-4z" fill="#E8694C"/>
+    <path d="M330 126c-10 0-16 6-14 13 1 5 6 7 13 6 8-1 16-4 22-8-6-7-13-11-21-11z" fill="#E8694C"/>
+    <path d="M420 124c8 1 13 6 12 12-3-1-8-3-14-3 0-3 1-6 2-9z" fill="#d4543b"/>
+  </g>
+</svg>
